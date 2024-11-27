@@ -1,0 +1,157 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'poppins';
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 5px;
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Gaya untuk logo */
+.logo a {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    text-decoration: none;
+}
+.logo a:hover{
+    color: #000000;
+    background: gray;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: none;
+
+}
+/* Gaya untuk list item di navbar */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+    font-family: 'Calibri';
+}
+
+/* Efek hover pada link */
+.nav-links a:hover {
+    color: #000000;
+    background: gray;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+section{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    color: white;
+}
+.box{
+    max-width: 600px;
+}
+
+h1{
+    font-size: 4em;
+}
+
+/* p{
+    display:none;
+} */
+
+iframe{
+    border-radius: 2em;
+    border: none;
+    width: 500px;
+    height: 500px;
+    opacity: 0.7;
+    transition: 0.3 ease-in-out;
+}
+
+iframe:hover{
+    transform: scale(1.1);
+    opacity: 1;
+
+}
+
+/* Responsif: Jika layar kecil, navbar akan menumpuk secara vertikal */
+@media screen and (max-width: 720px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .box{
+        display:flex;
+        margin-top: 20rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    iframe {
+    border-radius: 2em;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    opacity: 0.7;
+    transition: 0.3 ease-in-out;
+    }
+
+    section{
+    flex-direction: column;
+    }
+
+    .box h1 {
+        font-size: 2em;
+    } 
+    .box p{
+        display:flex;
+    }
+}
